@@ -1,6 +1,10 @@
 spring:
   application:
     name: user-service
+  cloud:
+    kubernetes:
+      discovery:
+        all-namespaces: true
 server:
   port: 6011
 

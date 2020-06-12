@@ -1,2 +1,5 @@
 rootProject.name = 'platform'
+include 'payment-service'
+include 'user-service'
+include 'reservation-service'
 
