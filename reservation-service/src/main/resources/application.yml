@@ -1,5 +1,13 @@
 spring:
   application:
     name: reservation-service
+  cloud:
+    kubernetes:
+      discovery:
+        all-namespaces: true
+      config:
+        enabled: true
+
 server:
   port: 6012
+

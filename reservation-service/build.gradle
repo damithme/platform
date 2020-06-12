@@ -19,6 +19,9 @@ repositories {
 }
 
 dependencies {
+    compile group: 'io.fabric8', name: 'spring-cloud-starter-kubernetes-all', version: '0.1.6'
+    compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-netflix-ribbon', version: '2.2.3.RELEASE'
+    compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-openfeign', version: '2.2.3.RELEASE'
     implementation 'org.springframework.boot:spring-boot-starter-web'
     compileOnly 'org.projectlombok:lombok'
     annotationProcessor 'org.projectlombok:lombok'
