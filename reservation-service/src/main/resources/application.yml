@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: reservation-service
+server:
+  port: 6012

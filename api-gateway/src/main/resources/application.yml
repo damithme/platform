@@ -1,0 +1,16 @@
+server:
+  port: 6010
+spring:
+  cloud:
+    gateway:
+      routes:
+        -
+          id: reservation-service
+          predicates:
+            - Path=/hotels/**
+          uri: "http://localhost:6012/"
+        -
+          id: user-service
+          predicates:
+            - Path=/user/**
+          uri: "http://localhost:6011/"
