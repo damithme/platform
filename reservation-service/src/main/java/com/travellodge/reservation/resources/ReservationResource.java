@@ -19,7 +19,7 @@ public class ReservationResource {
   @GetMapping
   public String get() {
 
-    userClient.findUser();
-    return "Reservation";
+    String user = userClient.findUser();
+    return "Reservation" + user;
   }
 }

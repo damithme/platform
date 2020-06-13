@@ -3,4 +3,5 @@ include 'payment-service'
 include 'user-service'
 include 'reservation-service'
 include 'api-gateway'
+include 'common'
 

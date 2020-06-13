@@ -2,11 +2,25 @@ plugins {
     id 'org.springframework.boot' version '2.3.1.RELEASE'
     id 'io.spring.dependency-management' version '1.0.9.RELEASE'
     id 'java'
+    id 'com.palantir.docker' version '0.22.1'
+    id 'com.palantir.docker-run' version '0.22.1'
 }
 
 group = 'com.travellodge'
-version = '0.0.1-SNAPSHOT'
+version = '1.0'
 sourceCompatibility = '1.8'
+
+docker {
+    name "damithme/travel-lodge-reservation-service:1.0"
+    tag 'DockerHub', "damithme/travel-lodge-reservation-service:1.0"
+}
+
+dockerRun {
+    name "${project.name}"
+    image "${project.name}:${project.version}"
+    ports '8080:8080'
+    clean true
+}
 
 configurations {
     compileOnly {
@@ -19,8 +33,9 @@ repositories {
 }
 
 dependencies {
-//    implementation group: 'org.springframework.cloud', name: 'spring-cloud-starter-kubernetes-all', version: '1.1.3.RELEASE'
-//    implementation group: 'org.springframework.cloud', name: 'spring-cloud-commons', version: '2.2.3.RELEASE'
+    implementation group: 'org.springframework.cloud', name: 'spring-cloud-starter-kubernetes-all', version: '1.1.3.RELEASE'
+    implementation group: 'io.dekorate', name: 'kubernetes-annotations', version: '1.0.0'
+    implementation group: 'io.dekorate', name: 'kubernetes-spring-starter', version: '1.0.0'
     implementation group: 'org.springframework.cloud', name: 'spring-cloud-starter-netflix-eureka-client', version: '2.2.3.RELEASE'
     implementation group: 'org.springframework.cloud', name: 'spring-cloud-starter-netflix-ribbon', version: '2.2.3.RELEASE'
     implementation group: 'org.springframework.cloud', name: 'spring-cloud-starter-openfeign', version: '2.2.3.RELEASE'
