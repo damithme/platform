@@ -16,8 +16,11 @@ spring:
           predicates:
             - Path=/users/**
           uri: "http://localhost:6011/"
+        -
+          id: payment-service
+          predicates:
+            - Path=/payments/**
+          uri: "http://localhost:6013/"
     kubernetes:
       discovery:
         all-namespaces: true
-#      config:
-#        enabled: true

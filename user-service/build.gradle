@@ -34,14 +34,17 @@ repositories {
 }
 
 dependencies {
-    //implementation group: 'org.springframework.cloud', name: 'spring-cloud-starter-kubernetes-all', version: '1.1.3.RELEASE'
     implementation group: 'org.springframework.cloud', name: 'spring-cloud-starter-netflix-eureka-client', version: '2.2.3.RELEASE'
     implementation group: 'org.springframework.cloud', name: 'spring-cloud-starter-openfeign', version: '2.2.3.RELEASE'
     implementation group: 'org.springframework.cloud', name: 'spring-cloud-starter-config', version: '2.2.3.RELEASE'
     implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-starter-test'
     implementation 'org.projectlombok:lombok'
     annotationProcessor 'org.projectlombok:lombok'
     implementation 'org.springframework.boot:spring-boot-starter-data-mongodb'
+    testImplementation group: 'org.springframework.boot', name: 'spring-boot-test', version: '2.3.1.RELEASE'
+    testImplementation group: 'org.powermock', name: 'powermock-module-junit4', version: '2.0.7'
+    testImplementation group: 'org.powermock', name: 'powermock-api-mockito2', version: '2.0.7'
 }
 
 test {

@@ -5,4 +5,4 @@ spring:
     config:
       discovery:
         service-id: config-server
-      label: user-server
+      label: user-service

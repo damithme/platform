@@ -1,4 +1,6 @@
 spring:
+  application:
+    name: payment-service
   cloud:
     discovery:
       enabled: true
@@ -6,3 +8,13 @@ spring:
       discovery:
         service-id: config-server
       label: payment-service
+  data:
+    mongodb:
+      username: root
+      password: roopassword
+      database: payments
+      port: 27017
+      host: localhost
+
+server:
+  port: 6013
