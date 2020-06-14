@@ -29,11 +29,24 @@ public class UserResource {
     return "User";
   }
 
+
   @PostMapping
   public UserVO createNewUser(@RequestBody final UserVO userVO) {
     final User newUser = userTransformers.buildUser(userVO);
     final User savedUser = userService.createUser(newUser);
     return userTransformers.buildUserVO(savedUser);
   }
+
+  @GetMapping("/{id}")
+  public UserVO getUser(@PathVariable final String id) {
+    return userTransformers.buildUserVO(userService.getUser(id));
+  }
+
+  @GetMapping("/{username}")
+  public UserVO getUserByUsername(@PathVariable final String username) {
+    return userTransformers.buildUserVO(userService.getUser(username));
+  }
+
+
 
 }

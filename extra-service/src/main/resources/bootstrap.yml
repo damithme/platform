@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: extra-service
+  cloud:
+    discovery:
+      enabled: true
+    config:
+      discovery:
+        service-id: extra-service
+
+server:
+  port: 6014
