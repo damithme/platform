@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
  * Created by Damith Ganegoda on 2020-06-12.
  */
 @RestController
-@RequestMapping("/user")
+@RequestMapping("/users")
 public class UserResource {
 
   @Autowired

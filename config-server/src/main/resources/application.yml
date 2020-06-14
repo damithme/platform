@@ -10,5 +10,8 @@ spring:
           clone-on-start: true
           search-paths:
             - user-service
+            - reservation-service
+            - extra-service
+            - payment-service
 server:
   port: 8888

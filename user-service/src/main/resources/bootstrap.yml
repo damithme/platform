@@ -1,12 +1,8 @@
 spring:
-  application:
-    name: user-service
   cloud:
     discovery:
       enabled: true
     config:
       discovery:
-        service-id: user-service
-
-server:
-  port: 6011
+        service-id: config-server
+      label: user-server

@@ -1,12 +1,8 @@
 spring:
-  application:
-    name: payment-service
   cloud:
     discovery:
       enabled: true
     config:
       discovery:
-        service-id: payment-service
-
-server:
-  port: 6013
+        service-id: config-server
+      label: payment-service

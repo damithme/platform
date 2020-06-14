@@ -9,12 +9,12 @@ spring:
         -
           id: reservation-service
           predicates:
-            - Path=/reservation/**
+            - Path=/reservations/**
           uri: "http://localhost:6012/"
         -
           id: user-service
           predicates:
-            - Path=/user/**
+            - Path=/users/**
           uri: "http://localhost:6011/"
     kubernetes:
       discovery:

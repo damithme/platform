@@ -1,0 +1,6 @@
+spring:
+    application:
+        name: extra-service
+server:
+    port: 6014
+

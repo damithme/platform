@@ -1,4 +1,4 @@
-package com.travellodge.common.model;
+package com.travellodge.common.models;
 
 /**
  * Created by Damith Ganegoda on 2020-06-14.

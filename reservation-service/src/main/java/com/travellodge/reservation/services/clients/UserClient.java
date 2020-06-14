@@ -1,4 +1,4 @@
-package com.travellodge.reservation.services;
+package com.travellodge.reservation.services.clients;
 
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.context.annotation.Configuration;

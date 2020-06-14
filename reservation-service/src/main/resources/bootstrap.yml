@@ -1,12 +1,8 @@
 spring:
-  application:
-    name: reservation-service
   cloud:
     discovery:
       enabled: true
     config:
       discovery:
-        service-id: reservation-service
-
-server:
-  port: 6012
+        service-id: config-server
+      label: reservation-service
